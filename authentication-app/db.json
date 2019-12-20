@@ -1,0 +1,12 @@
+{
+    "users" : [
+        {
+        "id":19,
+        "email":"test@gmail.com",
+        "username":"Test",
+        "password":"test",
+        "jwt":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRlc3QiLCJpZCI6MTl9.u6374qnw3how1V8LKkJpFiudFvVGoG7pSXuIMGJu4vg"
+
+        }
+    ]
+}
