@@ -1,5 +1,6 @@
 import React, { Component, createRef } from 'react'
 import styles from "./login-form.module.css";
+import AuthContext from "../context/authentication-context"
 
 class LoginForm extends Component {
 
@@ -14,6 +15,8 @@ class LoginForm extends Component {
         this.passwordInputRef = createRef();
         console.log("Appel au contructeur")
     }
+
+    static contextType = AuthContext;
 
     someMethod(){
         console.log("Appel à someMethod");
@@ -42,11 +45,12 @@ class LoginForm extends Component {
                 }
                 
         })
-        console.log(jwt[0]) ;  
+        console.log(jwt[0]) ; 
+        this.context.setToken(true,jwt) 
     }
         
     onClickSubmitBtn(event){
-
+        this.context;
         console.log("onClickSubmitBtnInput",this.state);
         console.log(this.passwordInputRef);
         event.preventDefault(); // evite le comportement par défaut du bouton => de rafraichir la page
